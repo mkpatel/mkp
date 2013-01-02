@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+        id = "com.phonegap.example"
+        versionCode="10"
+        version = "1.0.0">
+		    <gap:plugin name="Notification" value="org.apache.cordova.Notification"/>
+    <gap:plugin name="Storage" value="org.apache.cordova.storage" />
+    <gap:plugin name="Battery" value="org.apache.cordova.BatteryListener" />
+    <gap:plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    <gap:plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager" />
+</widget>
