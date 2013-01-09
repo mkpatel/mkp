@@ -1,5 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>Cordova</title>
@@ -10,31 +9,23 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/2.2.0/jquery.mobile-1.2.0.min.css" />
         <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-        
-
-    
-  </head>
-  <body >
-  <div>
-                       
-</div>
-<script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
-<script type="text/javascript" charset="utf-8" src="mkp.js"></script>
+     <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
     <script type="text/javascript" charset="utf-8">
-     jQuery.ajax({
-                      beforeSend: function() { $.mobile.utils.showWaitBox("a", "Loading");},
-                      sucess:function()(navigator.notification.alert('request',null,'success','OK');},
-                      complete:function(){$.mobile.utils.hideWaitBox();}
-                      
-                 });
     function onLoad() 
     {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
     function onDeviceReady() 
     {
-       
+       navigator.notification.LoadingStart();
     }
-    </script>
+    </script>   
+      
+  </head>
+  <body>
+  <div>
+         <p><a href="#" onclick="onLoad();">Show Alert</a></p>              
+  </div>
   </body>
+  
 </html>
