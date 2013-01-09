@@ -1,31 +1,40 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Cordova</title>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <title>Right Click Demo</title> 
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/2.2.0/jquery.mobile-1.2.0.min.css" />
-        <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-     <script type="text/javascript" charset="utf-8" src="cordova-2.2.0.js"></script>
+    <title>Notification Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     <script type="text/javascript" charset="utf-8">
-    function onLoad() 
-    {
-        document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        // Empty
     }
-    function onDeviceReady() 
-    {
-       navigator.notification.LoadingStart();
+
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
     }
-    </script>   
-      
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    </script>
   </head>
   <body>
-  <div>
-         <p><a href="#" onclick="onLoad();">Show Alert</a></p>              
-  </div>
+    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
   </body>
-  
 </html>
